@@ -51,8 +51,8 @@ gulp.task('watchify', () => {
             gutil.log(err.codeFrame);
             this.emit('end');
         })
-        .pipe(buffer())
-        .pipe(uglify())
+        // .pipe(buffer())
+        // .pipe(uglify())
         .pipe(gulp.dest(`${DEST}/js`));
 });
 
