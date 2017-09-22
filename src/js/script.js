@@ -35,13 +35,10 @@ const plane = new THREE.Mesh(planeGeom, planeMat);
 plane.rotation.x = Math.PI * 0.5;
 
 const loader = new MMDLoader.MMDLoader();
-const helper = new MMDLoader.MMDHelper(renderer);
-console.log(renderer);
-console.log(helper);
+const helper = new MMDLoader.MMDHelper();
 
 const render = () => {
   const loop = () => {
-    // helper.render(scene, camera);
     renderer.render(scene, camera);
 
     window.requestAnimationFrame(loop);
